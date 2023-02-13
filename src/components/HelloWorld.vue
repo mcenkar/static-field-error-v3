@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <h1>{{ display }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -39,7 +40,10 @@ import { Options, Vue } from 'vue-class-component';
   }
 })
 export default class HelloWorld extends Vue {
+  public static readonly varOne = 6;
+  public static readonly varTwo = HelloWorld.varOne / 3;
   msg!: string
+  display = HelloWorld.varTwo
 }
 </script>
 
